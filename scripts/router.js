@@ -9,7 +9,18 @@ Mistral.configure({
 Mistral.route('/', 'base', [{
     pathToTemplate: '../templates/home.html',
     renderIn: '#content',
-    name: 'hello'
+    name: 'hello',
+    data: {
+        Name: 'Yoza Wiratama',
+        count: 0
+    },
+    onRendered: function () {
+        $('#btnClick').click(function (e) {
+            e.preventDefault();
+            var counter = parseInt($('#clickCounter').text());
+            $('#clickCounter').text(counter + 1);
+        });
+    }
 }]);
 Mistral.route('/about', 'about', [{
     pathToTemplate: '../templates/about.html',
