@@ -3,6 +3,7 @@ var nav = {
     renderIn: '.nav',
     name: 'nav'
 };
+Session.set('counter', 0);
 Mistral.configure({
     templates: [nav]
 });
@@ -11,14 +12,15 @@ Mistral.route('/', 'base', [{
     renderIn: '#content',
     name: 'hello',
     data: {
-        Name: 'Yoza Wiratama',
-        count: 0
+        Name: 'Mistral',
+        count: function(){
+            return Session.get('counter');
+        }
     },
     onRendered: function () {
         $('#btnClick').click(function (e) {
             e.preventDefault();
-            var counter = parseInt($('#clickCounter').text());
-            $('#clickCounter').text(counter + 1);
+            Session.setReactive('counter', Session.get('counter')+1);
         });
     }
 }]);
