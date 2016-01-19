@@ -1,0 +1,28 @@
+{
+  "name": "startup",
+  "version": "0.3.0",
+  "description": "This is a startup project of mistral",
+  "main": "servers.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mistraljs/startup.git"
+  },
+  "keywords": [
+    "mistral",
+    "startup"
+  ],
+  "author": "Yoza Wiratama",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mistraljs/startup/issues"
+  },
+  "homepage": "https://github.com/mistraljs/startup#readme",
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "lodash": "^4.0.0",
+    "mistraljs": "^0.1.4"
+  }
+}
